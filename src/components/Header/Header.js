@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import { Menu, Icon, Row, Col } from "antd";
 
 const Top = () => (
   <div>
@@ -31,41 +32,83 @@ const Contact = () => (
   </div>
 );
 
-const Header = () => {
-  return (
-    <Router>
-      <div>
-        <h1>Portfolio</h1>
-        <ul>
-          <li>
-            <Link to="/">Top</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/skill">Skill</Link>
-          </li>
-          <li>
-            <Link to="/works">Works</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </div>
-      <div style={{ padding: "120px" }}>
-        <Switch>
-          <Route path="/" exact component={Top} />
-          <Route path="/about" exact component={About} />
-          <Route path="/skill" exact component={Skill} />
-          <Route path="/works" exact component={Works} />
-          <Route path="/contact" exact component={Contact} />
-          <Route exact component={Top} />
-        </Switch>
-      </div>
-    </Router>
-  );
-};
+class Header extends React.Component {
+  state = {
+    current: "top"
+  };
+
+  handleClick = e => {
+    this.setState({
+      current: e.key
+    });
+  };
+
+  render() {
+    return (
+      <Router>
+        <Row
+          style={{
+            maxWidth: "1200px",
+            textAlign: "center",
+            margin: "0 auto"
+          }}
+        >
+          <Col xs={8}>
+            <h1 style={{ lineHeight: "64px" }}>Portfolio</h1>
+          </Col>
+          <Col xs={14}>
+            <Menu
+              onClick={this.handleClick}
+              selectedKeys={[this.state.current]}
+              mode="horizontal"
+              style={{ lineHeight: "64px" }}
+            >
+              <Menu.Item key="top">
+                <Link to="/">
+                  <Icon type="user" />
+                  Top
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="about">
+                <Link to="/about">
+                  <Icon type="monitor" />
+                  About
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="skill">
+                <Link to="/skill">
+                  <Icon type="solution" />
+                  Skill
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="works">
+                <Link to="/works">
+                  <Icon type="shopping" />
+                  Works
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="contact">
+                <Link to="/contact">
+                  <Icon type="mail" />
+                  Contact
+                </Link>
+              </Menu.Item>
+            </Menu>
+          </Col>
+        </Row>
+        <div style={{ padding: "80px" }}>
+          <Switch>
+            <Route path="/" exact component={Top} />
+            <Route path="/about" exact component={About} />
+            <Route path="/skill" exact component={Skill} />
+            <Route path="/works" exact component={Works} />
+            <Route path="/contact" exact component={Contact} />
+            <Route exact component={Top} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
+}
 
 export default Header;
