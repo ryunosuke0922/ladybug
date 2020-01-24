@@ -1,12 +1,13 @@
 import React from "react";
 import { Typography, Layout } from "antd";
+
 import bg from "../../assets/imgas/header-bg.png";
 
-const { Content } = Layout;
 const { Title } = Typography;
+const { Content } = Layout;
 
 export const Top = () => (
-  <Layout
+  <Content
     style={{
       width: "100%",
       minHeight: "700px",
@@ -17,27 +18,25 @@ export const Top = () => (
       backgroundSize: "cover"
     }}
   >
-    <Content style={{ margin: "60px 16px" }}>
-      <Title
-        style={{
-          marginTop: "150px",
-          letterSpacing: "0px",
-          color: "#ffffff",
-          textShadow: "2px 2px 2px #000"
-        }}
-      >
-        Ryunosuke Maeda
-      </Title>
-      <Title
-        level={3}
-        style={{
-          letterSpacing: "0px",
-          color: "#ffffff",
-          textShadow: "2px 2px 2px #000"
-        }}
-      >
-        Web Engineer
-      </Title>
-    </Content>
-  </Layout>
+    <Title
+      style={{
+        paddingTop: "160px",
+        letterSpacing: "4px",
+        color: "#fff",
+        textShadow: "2px 2px 2px #000"
+      }}
+    >
+      Ryunosuke Maeda
+    </Title>
+    <Title
+      level={3}
+      style={{
+        letterSpacing: "4px",
+        color: "#fff",
+        textShadow: "2px 2px 2px #000"
+      }}
+    >
+      Web Engineer
+    </Title>
+  </Content>
 );
