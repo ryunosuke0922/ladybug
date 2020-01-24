@@ -49,10 +49,10 @@ class Header extends React.Component {
             margin: "0 auto"
           }}
         >
-          <Col xs={8}>
+          <Col xs={20} sm={20} md={8} lg={8} xl={8} xxl={8}>
             <h1 style={{ lineHeight: "64px" }}>Portfolio</h1>
           </Col>
-          <Col xs={14}>
+          <Col xs={4} sm={4} md={14} lg={14} xl={14} xxl={14}>
             <Menu
               onClick={this.handleClick}
               selectedKeys={[this.state.current]}
