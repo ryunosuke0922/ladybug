@@ -1,8 +1,6 @@
 import React from "react";
-import { Typography, Layout, Avatar } from "antd";
+import { Typography, Layout } from "antd";
 import styled from "styled-components";
-
-import icon from "../../assets/imgas/icon.jpg";
 
 const { Title, Text } = Typography;
 const { Content } = Layout;

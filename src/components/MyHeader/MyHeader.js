@@ -8,14 +8,9 @@ import { Top } from "../Top/Top";
 import { About } from "../About/About";
 import { Skill } from "../Skill/Skill";
 import { Works } from "../Works/Works";
+import { Contact } from "../Contact/Contact";
 
 const { Header } = Layout;
-
-const Contact = () => (
-  <div>
-    <h1>Contact</h1>
-  </div>
-);
 
 const Base = styled(Header)`
   text-align: center;
