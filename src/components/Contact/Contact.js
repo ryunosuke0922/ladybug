@@ -19,13 +19,13 @@ const ContactAvatar = styled(Avatar)`
   margin-bottom: 20px;
 `;
 
-const WorksTitle = styled(Title)`
+const ContactTitle = styled(Title)`
   letter-spacing: 4px;
 `;
 
 export const Contact = () => (
   <Base>
-    <WorksTitle level={3}>Contact</WorksTitle>
+    <ContactTitle level={3}>Contact</ContactTitle>
     <div style={{ marginTop: "60px" }}>
       <a href="https://twitter.com/ryunosuke0922">
         <ContactAvatar size={256} src={icon} />
