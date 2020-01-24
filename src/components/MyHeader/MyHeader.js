@@ -7,14 +7,9 @@ import styled from "styled-components";
 import { Top } from "../Top/Top";
 import { About } from "../About/About";
 import { Skill } from "../Skill/Skill";
+import { Works } from "../Works/Works";
 
 const { Header } = Layout;
-
-const Works = () => (
-  <div>
-    <h1>Works</h1>
-  </div>
-);
 
 const Contact = () => (
   <div>
