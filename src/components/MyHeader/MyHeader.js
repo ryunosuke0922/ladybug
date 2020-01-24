@@ -6,14 +6,9 @@ import styled from "styled-components";
 
 import { Top } from "../Top/Top";
 import { About } from "../About/About";
+import { Skill } from "../Skill/Skill";
 
 const { Header } = Layout;
-
-const Skill = () => (
-  <div>
-    <h1>Skill</h1>
-  </div>
-);
 
 const Works = () => (
   <div>
