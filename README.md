@@ -1,3 +1,11 @@
+# ladybug
+
+## 公開 URL
+
+https://reverent-almeida-923bfc.netlify.com/
+
+## Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
