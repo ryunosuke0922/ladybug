@@ -16,7 +16,6 @@ const Base = styled(Content)`
 
 const AboutTitle = styled(Title)`
   letter-spacing: 4px;
-  text-shadow: 1px 1px 1px #000;
 `;
 
 const AboutAvatar = styled(Avatar)`
