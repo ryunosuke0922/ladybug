@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import { Menu, Icon, Layout } from "antd";
 
+import styled from "styled-components";
+
 import { Top } from "../Top/Top";
 
 const { Header } = Layout;
@@ -30,6 +32,16 @@ const Contact = () => (
   </div>
 );
 
+const Base = styled(Header)`
+  text-align: center;
+  background: #f0f2f5;
+`;
+
+const HeaderMenu = styled(Menu)`
+  line-height: 64px;
+  background: #f0f2f5;
+`;
+
 class MyHeader extends React.Component {
   state = {
     current: "top"
@@ -44,12 +56,11 @@ class MyHeader extends React.Component {
   render() {
     return (
       <Router>
-        <Header style={{ textAlign: "center", background: "#f0f2f5" }}>
-          <Menu
+        <Base>
+          <HeaderMenu
             onClick={this.handleClick}
             selectedKeys={[this.state.current]}
             mode="horizontal"
-            style={{ lineHeight: "64px", background: "#f0f2f5" }}
           >
             <Menu.Item key="top">
               <Link to="/">
@@ -81,8 +92,8 @@ class MyHeader extends React.Component {
                 Contact
               </Link>
             </Menu.Item>
-          </Menu>
-        </Header>
+          </HeaderMenu>
+        </Base>
         <Switch>
           <Route path="/" exact component={Top} />
           <Route path="/about" exact component={About} />
