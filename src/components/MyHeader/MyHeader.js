@@ -5,14 +5,9 @@ import { Menu, Icon, Layout } from "antd";
 import styled from "styled-components";
 
 import { Top } from "../Top/Top";
+import { About } from "../About/About";
 
 const { Header } = Layout;
-
-const About = () => (
-  <div>
-    <h1>About</h1>
-  </div>
-);
 
 const Skill = () => (
   <div>
