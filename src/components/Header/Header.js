@@ -2,11 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import { Menu, Icon, Row, Col } from "antd";
 
-const Top = () => (
-  <div>
-    <h1>Top</h1>
-  </div>
-);
+import { Top } from "../Top/Top";
 
 const About = () => (
   <div>
@@ -96,16 +92,14 @@ class Header extends React.Component {
             </Menu>
           </Col>
         </Row>
-        <div style={{ padding: "80px" }}>
-          <Switch>
-            <Route path="/" exact component={Top} />
-            <Route path="/about" exact component={About} />
-            <Route path="/skill" exact component={Skill} />
-            <Route path="/works" exact component={Works} />
-            <Route path="/contact" exact component={Contact} />
-            <Route exact component={Top} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/" exact component={Top} />
+          <Route path="/about" exact component={About} />
+          <Route path="/skill" exact component={Skill} />
+          <Route path="/works" exact component={Works} />
+          <Route path="/contact" exact component={Contact} />
+          <Route exact component={Top} />
+        </Switch>
       </Router>
     );
   }
