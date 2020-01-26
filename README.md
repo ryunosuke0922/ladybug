@@ -1,8 +1,6 @@
 # ladybug
 
-## 公開 URL
-
-https://reverent-almeida-923bfc.netlify.com/
+URL:https://ryu0922-reactsample.netlify.com/
 
 ## Create React App
 
