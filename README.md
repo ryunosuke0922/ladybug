@@ -1,6 +1,6 @@
 # ladybug
 
-URL:https://ryu0922-reactsample.netlify.com/
+URL:https://ryunosuke0922-reactsample.netlify.com/
 
 ## Create React App
 
